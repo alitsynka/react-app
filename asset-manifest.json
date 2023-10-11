@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-app/static/css/main.ba5c7e0f.css",
+    "main.css": "/react-app/static/css/main.001579c8.css",
     "main.js": "/react-app/static/js/main.35ddbd29.js",
     "static/js/787.28cb0dcd.chunk.js": "/react-app/static/js/787.28cb0dcd.chunk.js",
     "static/media/NunitoSans_10pt-Regular.ttf": "/react-app/static/media/NunitoSans_10pt-Regular.7a5b1e324beb1081259a.ttf",
@@ -16,12 +16,12 @@
     "static/media/firstStep.svg": "/react-app/static/media/firstStep.c950ff6524e00f5b1005626b20412e89.svg",
     "index.html": "/react-app/index.html",
     "static/media/charm_menu-hamburger.svg": "/react-app/static/media/charm_menu-hamburger.20ef71ba434f56faad6ddb81a95dd01a.svg",
-    "main.ba5c7e0f.css.map": "/react-app/static/css/main.ba5c7e0f.css.map",
+    "main.001579c8.css.map": "/react-app/static/css/main.001579c8.css.map",
     "main.35ddbd29.js.map": "/react-app/static/js/main.35ddbd29.js.map",
     "787.28cb0dcd.chunk.js.map": "/react-app/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba5c7e0f.css",
+    "static/css/main.001579c8.css",
     "static/js/main.35ddbd29.js"
   ]
 }
