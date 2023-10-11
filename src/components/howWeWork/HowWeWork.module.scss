@@ -1,0 +1,321 @@
+@import "../../assets/styles/mixines";
+
+.Wrapper {
+  position: relative;
+  width: 100%;
+  top: 90px;
+
+  .WrBlock {
+    @include Wrapper;
+    padding: 95px 85px 95px 85px;
+
+    width: 100%;
+
+    &:nth-child(2n-1) {
+      background-color: #ffffff40;
+    }
+
+
+    .Container {
+      @include MainContainer;
+      @include FLexCol;
+      width: 100%;
+      justify-content: flex-start;
+      align-items: center;
+
+      > div {
+        margin-top: 120px;
+        @include break($breakpoint_l) {
+          margin-top: 80px;
+        }
+      }
+
+      .Title {
+        font-family: "Nunito-Bold";
+        font-size: 46px;
+        font-weight: 800;
+        line-height: 50px;
+        text-align: left;
+        @include break($breakpoint_xl) {
+          text-align: center;
+        }
+        @include break($breakpoint_s) {
+          font-size: 42px;
+          font-weight: 800;
+          line-height: 50px;
+        }
+
+        span {
+          color: rgba(117, 191, 122, 1);
+        }
+
+        &:nth-child(3) {
+          font-size: 38px;
+        }
+      }
+
+
+      .StepsBlock {
+        width: 100%;
+        @include FLexRow;
+        align-items: flex-start;
+        justify-content: space-between;
+        @include break($breakpoint_xl) {
+          flex-wrap: wrap;
+          row-gap: 40px;
+          justify-content: space-evenly;
+        }
+
+        .Step {
+          @include FLexCol;
+          align-items: center;
+          justify-content: flex-start;
+          max-width: 300px;
+
+          .TitleStep {
+            font-family: "Nunito-SemiBold";
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 32px;
+            text-align: center;
+            margin: 20px 40px;
+          }
+
+          p {
+            color: rgba(158, 157, 162, 1);
+            font-family: "Nunito-Regular";
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 32px;
+            text-align: center;
+          }
+        }
+      }
+
+      .NetWorks {
+        width: 100%;
+        @include FLexRow;
+        justify-content: space-between;
+        align-items: center;
+        @include break($breakpoint_xl) {
+          flex-wrap: wrap;
+          row-gap: 40px;
+          column-gap: 20px;
+          justify-content: space-evenly;
+        }
+
+        .NetWork {
+          box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.1);
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          background: rgba(255, 255, 255, 1);
+          border-radius: 15px 15px;
+          padding: 35px 45px;
+          height: 155px;
+          position: relative;
+
+          p {
+            font-family: "Nunito-SemiBold";
+            font-size: 24px;
+            margin-top: 10px;
+            line-height: 34px;
+            text-align: center;
+            max-width: 180px;
+          }
+
+          .AdmobSvg {
+            width: 40px;
+            height: 40px;
+          }
+
+          .AdsensSvg {
+            width: 40px;
+            height: 40px;
+          }
+
+          .AmazonSvg {
+            position: relative;
+            top: -10px;
+            width: 120px;
+            height: 90px;
+
+            + p {
+              position: relative;
+              top: -50px;
+            }
+          }
+        }
+      }
+
+      .Conditions {
+        .ConditionsTitle {
+          color: rgba(158, 157, 162, 1);
+          font-family: "Nunito-Regular";
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 32px;
+          text-align: center;
+        }
+      }
+
+      .BtnConnect {
+        @include BtnConnect;
+        margin: 120px 0 100px;
+      }
+
+      .PaymentMethods {
+        @include FLexRow;
+        width: 100%;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include break($breakpoint_xl) {
+          flex-wrap: wrap;
+          row-gap: 40px;
+          justify-content: space-evenly;
+        }
+
+        .PaymentMethod {
+          padding: 10px 30px;
+          height: 100%;
+          margin-top: 50px;
+          @include break($breakpoint_l) {
+            flex-wrap: wrap;
+            row-gap: 20px;
+            justify-content: space-evenly;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+          }
+
+          p {
+            font-family: "Nunito-SemiBold";
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 32px;
+            text-align: center;
+            max-width: 280px;
+          }
+        }
+      }
+
+      .ContactBlock {
+        width: 100%;
+        height: 160px;
+        background: rgba(117, 191, 122, 1);
+        border-radius: 14px;
+        padding: 50px 65px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 0;
+        @include break($breakpoint_l) {
+          flex-direction: column;
+          height: 100%;
+          padding: 20px 25px;
+          align-items: flex-start;
+        }
+
+        .ConnectTitle {
+          font-family: 'Nunito-SemiBold';
+          font-size: 25px;
+          font-weight: 600;
+          line-height: 28px;
+          color: white;
+          text-align: left;
+        }
+
+        .Input {
+          padding: 0 15px;
+          background-color: white;
+          border: none;
+          outline: none;
+          width: 100%;
+          max-width: 500px;
+          height: 100%;
+          border-radius: 5px;
+          font-family: "Nunito-Regular";
+          font-size: 19px;
+          line-height: 24px;
+          @include break($breakpoint_l) {
+            margin: 30px 0;
+            padding: 15px 15px;
+            max-height: 64px;
+
+          }
+
+          &::placeholder {
+            color: #9E9DA2;
+            font-family: "Nunito-Regular";
+            font-size: 19px;
+            line-height: 24px;
+          }
+        }
+
+        .Btn {
+          font-family: "Nunito-Regular";
+          font-size: 19px;
+          line-height: 24px;
+          text-align: center;
+          background-color: black;
+          color: white;
+          width: 260px;
+          min-height: 60px;
+          margin-left: 20px;
+          border-radius: 4.39px;
+          padding: 0 15px;
+          @include break($breakpoint_l) {
+            width: 50%;
+            height: 60px;
+            margin-left: 0;
+
+          }
+          @include break($breakpoint_s) {
+            width: 100%;
+            height: 60px;
+            margin-left: 0;
+
+          }
+
+        }
+      }
+
+      .Accordion {
+        width: 80%;
+        border-radius: 12px;
+        @include break($breakpoint_l) {
+          width: 100%;
+        }
+
+        &:before {
+          display: none;
+        }
+
+        + .Accordion {
+          margin-top: 20px;
+          @include break($breakpoint_l) {
+            margin-top: 40px;
+          }
+        }
+      }
+
+      .AccordionTitle {
+        font-family: "Nunito-SemiBold";
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 32px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .DescAccordion {
+        font-family: "Nunito-Regular";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+      }
+    }
+
+
+  }
+}

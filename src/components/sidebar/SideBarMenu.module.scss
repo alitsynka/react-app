@@ -1,0 +1,39 @@
+@import "../../assets/styles/mixines";
+
+.HumburgerMenu {
+  display: none;
+  @include break($breakpoint_xl) {
+    display: block;
+  }
+}
+
+.List {
+  display: none;
+  @include break($breakpoint_xl) {
+    display: block;
+  }
+}
+
+.WrapperSideBar {
+  //border: 2px dashed #0edc0e;
+}
+
+.WrapperSideBar > div:nth-child(3) {
+  top: 90px;
+  min-width: 40%;
+  //border: 2px dashed mediumvioletred;
+
+  .Link {
+    > span {
+      //color: mediumvioletred;
+      //text-transform: uppercase;
+      font-family: "Nunito-Regular" !important;
+      font-size: 20px !important;
+      line-height: 35px !important;
+      letter-spacing: 0.01em;
+      text-align: left !important;
+      font-weight: 400;
+    }
+
+  }
+}

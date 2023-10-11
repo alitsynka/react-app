@@ -1,0 +1,66 @@
+@import "../../assets/styles/mixines";
+
+.Wrapper {
+  @include Wrapper;
+  position: relative;
+  top: 90px;
+
+  .Container {
+    @include MainContainer;
+    justify-content: space-between;
+    align-items: center;
+    @include break($breakpoint_xl) {
+      flex-direction: column-reverse;
+    }
+
+    .LeftBlock, .RightBlock {
+      @include break($breakpoint_xl) {
+        width: 100%;
+        @include FLexCol;
+        align-items: center;
+      }
+    }
+
+    .Title {
+      font-family: "Nunito-Bold";
+      font-size: 52px;
+      line-height: 62px;
+      letter-spacing: 0.01em;
+      text-align: left;
+      max-width: 540px;
+      font-weight: 900;
+      margin-bottom: 20px;
+      @include break($breakpoint_xl) {
+        max-width: 100%;
+        text-align: center;
+        margin-top: 50px;
+      }
+      @include break($breakpoint_l) {
+        font-size: 42px;
+        line-height: 57px;
+        margin-top: 35px;
+      }
+      @include break($breakpoint_s) {
+        font-size: 40px;
+        line-height: 52px;
+        margin-top: 45px;
+        margin-bottom: 40px;
+      }
+    }
+
+    .Desc {
+      color: #9E9DA2;
+      font-family: "Nunito-SemiBold";
+      font-size: 22px;
+      line-height: 32px;
+      letter-spacing: 0.01em;
+      text-align: left;
+      font-weight: 400;
+      max-width: 480px;
+      @include break($breakpoint_xl) {
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
