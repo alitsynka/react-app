@@ -10,6 +10,9 @@
   @include break($breakpoint_xxl) {
     padding: 20px 50px;
   }
+  @include break($breakpoint_xl) {
+    padding: 20px 25px;
+  }
 
   .Container {
     @include MainContainer;
