@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/react-app/static/css/main.ba5c7e0f.css",
+    "main.js": "/react-app/static/js/main.35ddbd29.js",
+    "static/js/787.28cb0dcd.chunk.js": "/react-app/static/js/787.28cb0dcd.chunk.js",
+    "static/media/NunitoSans_10pt-Regular.ttf": "/react-app/static/media/NunitoSans_10pt-Regular.7a5b1e324beb1081259a.ttf",
+    "static/media/NunitoSans_10pt-SemiBold.ttf": "/react-app/static/media/NunitoSans_10pt-SemiBold.39af491f33e04d1f69b6.ttf",
+    "static/media/NunitoSans_10pt-Bold.ttf": "/react-app/static/media/NunitoSans_10pt-Bold.e43c5a897c0189a89b62.ttf",
+    "static/media/Roud.png": "/react-app/static/media/Roud.11c4918ac91ccbf7fedc.png",
+    "static/media/amazon.svg": "/react-app/static/media/amazon.d1f406e7508df52a0fcd567d78c05050.svg",
+    "static/media/logo.svg": "/react-app/static/media/logo.ef01eb1cbd8b02ab3245d465a1d37705.svg",
+    "static/media/adsense.svg": "/react-app/static/media/adsense.c387d897839c516a83b7bb4e051f7cad.svg",
+    "static/media/admob.svg": "/react-app/static/media/admob.55c6245671f5417323437a3119cf1e5d.svg",
+    "static/media/thirdStep.svg": "/react-app/static/media/thirdStep.8603f091a54b63149fc593b2cf35fcfa.svg",
+    "static/media/secondStep.svg": "/react-app/static/media/secondStep.ee1d63f2db0251e38e669721aa4c1824.svg",
+    "static/media/firstStep.svg": "/react-app/static/media/firstStep.c950ff6524e00f5b1005626b20412e89.svg",
+    "index.html": "/react-app/index.html",
+    "static/media/charm_menu-hamburger.svg": "/react-app/static/media/charm_menu-hamburger.20ef71ba434f56faad6ddb81a95dd01a.svg",
+    "main.ba5c7e0f.css.map": "/react-app/static/css/main.ba5c7e0f.css.map",
+    "main.35ddbd29.js.map": "/react-app/static/js/main.35ddbd29.js.map",
+    "787.28cb0dcd.chunk.js.map": "/react-app/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ba5c7e0f.css",
+    "static/js/main.35ddbd29.js"
+  ]
+}
