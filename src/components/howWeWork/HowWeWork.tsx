@@ -25,6 +25,19 @@ const textAnimation = {
         transition: {delay: custom * 0.15},
     })
 }
+const shadowAnimation = {
+    hidden: {
+        y: 0,
+        opacity: 0,
+    },
+    visible: (custom: number) => ({
+        y: 0,
+        opacity: 1,
+        transition: {
+            duration: 0.9,
+            delay: custom * 0.25},
+    })
+}
 
 export const HowWeWork = () => {
 
@@ -112,9 +125,11 @@ export const HowWeWork = () => {
                                 viewport={{amount: 0.2}}
                                 className={style.NetWorks}>
                         <motion.div className={style.NetWork}
-                                    variants={stepsAnimation}
+                                    variants={shadowAnimation}
                                     whileHover={whileHover}
-                                    custom={1}>
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    custom={1.5}>
                             <Admob className={style.AdmobSvg}/>
                             <p>Admob</p>
                         </motion.div>
@@ -122,8 +137,8 @@ export const HowWeWork = () => {
                                     whileHover={whileHover}
                                     initial="hidden"
                                     whileInView="visible"
-                                    variants={stepsAnimation}
-                                    custom={2}>
+                                    variants={shadowAnimation}
+                                    custom={2.5}>
                             <Adsense className={style.AdsensSvg}/>
                             <p>AdSense</p>
                         </motion.div>
@@ -131,8 +146,8 @@ export const HowWeWork = () => {
                                     whileHover={whileHover}
                                     initial="hidden"
                                     whileInView="visible"
-                                    variants={stepsAnimation}
-                                    custom={3}>
+                                    variants={shadowAnimation}
+                                    custom={3.5}>
                             <Amazon className={style.AmazonSvg}/>
                             <p>Amazon</p>
                         </motion.div>
@@ -140,7 +155,7 @@ export const HowWeWork = () => {
                                     whileHover={whileHover}
                                     initial="hidden"
                                     whileInView="visible"
-                                    variants={stepsAnimation} custom={4}>
+                                    variants={shadowAnimation} custom={4.5}>
                             <p>Прочие по запросу</p>
                         </motion.div>
                     </motion.div>
