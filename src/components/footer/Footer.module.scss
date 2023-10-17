@@ -5,9 +5,11 @@
   background: white;
   position: relative;
   top: 90px;
+  padding: 70px 85px;
   @include break($breakpoint_s) {
-   padding: 80px 25px 40px 25px;
+    padding: 80px 25px 40px 25px;
   }
+
   .Container {
     @include MainContainer;
     @include FLexCol;

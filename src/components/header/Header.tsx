@@ -2,6 +2,7 @@ import style from './Header.module.scss';
 import {ReactComponent as Logo} from "../../assets/images/logo.svg";
 import {SideBarMenu} from "../sidebar/SideBarMenu";
 import {links} from '../../constants/constant'
+import {Link} from "react-scroll";
 
 export const Header = () => {
     return (
@@ -15,12 +16,31 @@ export const Header = () => {
                     {
                         links.map((link: any) => {
                             return (
-                                <li><a href="#" className={style.Link}>{link.title}</a></li>
+                                <li>
+                                    <Link to={link.path}
+                                          spy={true}
+                                          smooth={true}
+                                          hashSpy={true}
+                                          offset={-200}
+                                          duration={500}
+                                          delay={100}
+                                          className={style.Link}>
+                                        {link.title}
+                                    </Link></li>
                             )
                         })
                     }
                 </ul>
-                <button className={style.BtnConnect}>Связаться</button>
+                    <Link to={"form"}
+                          spy={true}
+                          smooth={true}
+                          hashSpy={true}
+                          offset={-250}
+                          duration={700}
+                          delay={100}
+                          className={style.BtnConnect}>
+                        Связаться
+                    </Link>
                 <SideBarMenu/>
             </div>
         </div>

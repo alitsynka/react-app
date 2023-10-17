@@ -14,10 +14,15 @@
     }
 
     .LeftBlock, .RightBlock {
+      position: relative;
+      overflow: hidden;
       @include break($breakpoint_xl) {
         width: 100%;
         @include FLexCol;
         align-items: center;
+      }
+      img{
+        position: relative;
       }
     }
 

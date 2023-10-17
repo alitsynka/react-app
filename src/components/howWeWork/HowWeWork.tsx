@@ -11,6 +11,20 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import {useState} from "react";
+import {motion} from 'framer-motion';
+
+
+const textAnimation = {
+    hidden: {
+        y: 100,
+        opacity: 0,
+    },
+    visible: (custom: number) => ({
+        y: 0,
+        opacity: 1,
+        transition: {delay: custom * 0.15},
+    })
+}
 
 export const HowWeWork = () => {
 
@@ -21,81 +35,174 @@ export const HowWeWork = () => {
             setExpanded(isExpanded ? panel : false);
         };
 
+    const stepsAnimation = {
+        hidden: {
+            y: 100,
+            opacity: 0,
+        },
+        visible: (custom: number) => ({
+            y: 0,
+            opacity: 1,
+            transition: {
+                // duration: 0.4,
+                delay: custom * 0.2,
+                ease: "easeInOut"
+            },
+        })
+    }
+    const whileHover = {
+        scale: 1.1,
+        boxShadow: '4px 4px 30px 0px rgba(0, 0, 0, 0.4)',
+        transition: {
+            ease: "easeIn"
+        }
+    }
     return (
         <div className={style.Wrapper}>
             <div className={style.WrBlock}>
-                <div className={style.Container}>
-                    <h2 className={style.Title}>Как <span>мы</span> работаем</h2>
-                    <div className={style.StepsBlock}>
-                        <div className={style.Step}>
+                <div className={style.Container} id={'HowWeWork'}>
+                    <motion.h2 className={style.Title}
+                               initial="hidden"
+                               whileInView="visible"
+                               viewport={{amount: 0.2}}
+                               variants={textAnimation}
+                               custom={1}>
+                        Как <span>мы</span> работаем
+                    </motion.h2>
+                    <motion.div className={style.StepsBlock}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{amount: 0.1}}>
+                        <motion.div variants={stepsAnimation} custom={2}
+                                    className={style.Step}>
                             <Step1/>
                             <h3 className={style.TitleStep}>Безопасно</h3>
                             <p>Заключаете договор и подключаете ключи</p>
-                        </div>
-                        <div className={style.Step}>
+                        </motion.div>
+                        <motion.div variants={stepsAnimation} custom={2}
+                                    className={style.Step}>
                             <Step2/>
                             <h3 className={style.TitleStep}>Стабильно</h3>
                             <p>Мы получаем выплату на несколько компаний в европе, что гарантирует поступление
                                 платежа</p>
-                        </div>
-                        <div className={style.Step}>
+                        </motion.div>
+                        <motion.div variants={stepsAnimation} custom={2}
+                                    className={style.Step}>
                             <Step3/>
                             <h3 className={style.TitleStep}>Удобно</h3>
                             <p>Заказываете выплату любым удобным для себя спобосом</p>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 </div>
             </div>
             <div className={style.WrBlock}>
                 <div className={style.Container}>
-                    <h2 className={style.Title}>Из каких сетей принимаем деньги</h2>
-                    <div className={style.NetWorks}>
-                        <div className={style.NetWork}>
+                    <motion.h2 variants={textAnimation}
+                               id={"WhereAccept"}
+                               initial="hidden"
+                               whileInView="visible"
+                               viewport={{amount: 0.2}}
+                               custom={1}
+                               className={style.Title}
+                    >
+                        Из каких сетей принимаем деньги
+                    </motion.h2>
+                    <motion.div initial="hidden"
+                                whileInView="visible"
+                                viewport={{amount: 0.2}}
+                                className={style.NetWorks}>
+                        <motion.div className={style.NetWork}
+                                    variants={stepsAnimation}
+                                    whileHover={whileHover}
+                                    custom={1}>
                             <Admob className={style.AdmobSvg}/>
                             <p>Admob</p>
-                        </div>
-                        <div className={style.NetWork}>
+                        </motion.div>
+                        <motion.div className={style.NetWork}
+                                    whileHover={whileHover}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    variants={stepsAnimation}
+                                    custom={2}>
                             <Adsense className={style.AdsensSvg}/>
                             <p>AdSense</p>
-                        </div>
-                        <div className={style.NetWork}>
+                        </motion.div>
+                        <motion.div className={style.NetWork}
+                                    whileHover={whileHover}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    variants={stepsAnimation}
+                                    custom={3}>
                             <Amazon className={style.AmazonSvg}/>
                             <p>Amazon</p>
-                        </div>
-                        <div className={style.NetWork}>
+                        </motion.div>
+                        <motion.div className={style.NetWork}
+                                    whileHover={whileHover}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    variants={stepsAnimation} custom={4}>
                             <p>Прочие по запросу</p>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 </div>
             </div>
             <div className={style.WrBlock}>
-                <div className={style.Container}>
+                <motion.div variants={textAnimation}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{amount: 0.2}}
+                            custom={1}
+                            className={style.Container}>
                     <h2 className={style.Title}>Условия сотрудничества</h2>
                     <div className={style.Conditions}>
                         <p className={style.ConditionsTitle}>Мы предлагаем гибкие условия сотрудничества начиная от 7%
                             от
                             суммы поступления</p>
                     </div>
-                </div>
+                </motion.div>
             </div>
             <div className={style.WrBlock}>
-                <div className={style.Container}>
-                    <h2 className={style.Title}>Способы оплаты</h2>
+                <div className={style.Container} id={'HowSent'}>
+                    <motion.h2 variants={textAnimation}
+                               initial="hidden"
+                               whileInView="visible"
+                               viewport={{amount: 0.2}}
+                               custom={1}
+                               className={style.Title}>Способы оплаты
+                    </motion.h2>
                     <div className={style.PaymentMethods}>
-                        <div className={style.PaymentMethod}>
+                        <motion.div className={style.PaymentMethod}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    variants={textAnimation} custom={1}
+                        >
                             <p>Счет ИП /<br/> Юридического лица</p>
-                        </div>
-                        <div className={style.PaymentMethod}>
+                        </motion.div>
+                        <motion.div className={style.PaymentMethod}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    variants={textAnimation} custom={1}
+                        >
                             <p>Перевод на карту Тинькофф или Сбербанк</p>
-                        </div>
-                        <div className={style.PaymentMethod}>
+                        </motion.div>
+                        <motion.div className={style.PaymentMethod}
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    variants={textAnimation} custom={1}
+                        >
                             <p>Криптовалюта</p>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
             <div className={style.WrBlock}>
-                <div className={style.Container}>
+                <motion.div className={style.Container}
+                            variants={stepsAnimation}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{amount: 0.2}}
+                            custom={1}
+                >
                     <h2 className={style.Title}>FAQ</h2>
 
                     <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}
@@ -169,16 +276,23 @@ export const HowWeWork = () => {
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
-                </div>
+                </motion.div>
             </div>
             <div className={style.WrBlock}>
-                <div className={style.Container}>
+                <motion.div className={style.Container}
+                            variants={stepsAnimation}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{amount: 0.2}}
+                            custom={1}
+                            id={'form'}
+                >
                     <div className={style.ContactBlock}>
                         <p className={style.ConnectTitle}>Оставьте свой email для связи.</p>
                         <input type="text" className={style.Input} placeholder={'Введите свой email'}/>
                         <button className={style.Btn}>Связаться со мной</button>
                     </div>
-                </div>
+                </motion.div>
 
             </div>
         </div>

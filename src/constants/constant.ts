@@ -4,19 +4,19 @@ export type LinksType = {
 }
 export const links:LinksType[] = [
     {
-        path: '#',
+        path: 'Main',
         title: 'Главная'
     },
     {
-        path: '#',
+        path: 'HowWeWork',
         title: 'Как мы работаем'
     },
     {
-        path: '#',
+        path: 'WhereAccept',
         title: 'Откуда принимаем'
     },
     {
-        path: '#',
+        path: 'HowSent',
         title: 'Как отправляем'
     },
 ]
