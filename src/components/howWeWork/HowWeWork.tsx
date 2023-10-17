@@ -43,11 +43,9 @@ export const HowWeWork = () => {
 
     const [expanded, setExpanded] = useState<string | false>(false);
 
-    const handleChange =
-        (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+    const handleChange = (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
             setExpanded(isExpanded ? panel : false);
         };
-
     const stepsAnimation = {
         hidden: {
             y: 100,
@@ -70,6 +68,7 @@ export const HowWeWork = () => {
             ease: "easeIn"
         }
     }
+
     return (
         <div className={style.Wrapper}>
             <div className={style.WrBlock}>
@@ -120,44 +119,27 @@ export const HowWeWork = () => {
                     >
                         Из каких сетей принимаем деньги
                     </motion.h2>
-                    <motion.div initial="hidden"
+                    <motion.div variants={shadowAnimation}
+                                initial="hidden"
                                 whileInView="visible"
+                                custom={2}
                                 viewport={{amount: 0.13}}
                                 className={style.NetWorks}>
-                        <motion.div className={style.NetWork}
-                                    variants={shadowAnimation}
-                                    whileHover={whileHover}
-                                    initial="hidden"
-                                    whileInView="visible"
-                                    custom={2}>
+                        <div className={style.NetWork}>
                             <Admob className={style.AdmobSvg}/>
                             <p>Admob</p>
-                        </motion.div>
-                        <motion.div className={style.NetWork}
-                                    whileHover={whileHover}
-                                    initial="hidden"
-                                    whileInView="visible"
-                                    variants={shadowAnimation}
-                                    custom={2}>
+                        </div>
+                        <div className={style.NetWork}>
                             <Adsense className={style.AdsensSvg}/>
                             <p>AdSense</p>
-                        </motion.div>
-                        <motion.div className={style.NetWork}
-                                    whileHover={whileHover}
-                                    initial="hidden"
-                                    whileInView="visible"
-                                    variants={shadowAnimation}
-                                    custom={2}>
+                        </div>
+                        <div className={style.NetWork}>
                             <Amazon className={style.AmazonSvg}/>
                             <p>Amazon</p>
-                        </motion.div>
-                        <motion.div className={style.NetWork}
-                                    whileHover={whileHover}
-                                    initial="hidden"
-                                    whileInView="visible"
-                                    variants={shadowAnimation} custom={2}>
+                        </div>
+                        <div className={style.NetWork}>
                             <p>Прочие по запросу</p>
-                        </motion.div>
+                        </div>
                     </motion.div>
                 </div>
             </div>

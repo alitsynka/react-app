@@ -120,12 +120,11 @@
           cursor: pointer;
           transition: all ease-in 0.3s;
 
-          //&:hover {
-          //  transition: all ease-in 0.3s;
-          //  padding: 39px 49px;
-          //  height: 165px;
-          //  box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.4)
-          //}
+          &:hover {
+            transition: all ease-in 0.3s;
+            scale: 1.1;
+            box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.4)
+          }
 
           p {
             font-family: "Nunito-SemiBold";
