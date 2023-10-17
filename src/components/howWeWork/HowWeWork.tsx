@@ -122,14 +122,14 @@ export const HowWeWork = () => {
                     </motion.h2>
                     <motion.div initial="hidden"
                                 whileInView="visible"
-                                viewport={{amount: 0.2}}
+                                viewport={{amount: 0.13}}
                                 className={style.NetWorks}>
                         <motion.div className={style.NetWork}
                                     variants={shadowAnimation}
                                     whileHover={whileHover}
                                     initial="hidden"
                                     whileInView="visible"
-                                    custom={1.5}>
+                                    custom={2}>
                             <Admob className={style.AdmobSvg}/>
                             <p>Admob</p>
                         </motion.div>
@@ -138,7 +138,7 @@ export const HowWeWork = () => {
                                     initial="hidden"
                                     whileInView="visible"
                                     variants={shadowAnimation}
-                                    custom={2.5}>
+                                    custom={2}>
                             <Adsense className={style.AdsensSvg}/>
                             <p>AdSense</p>
                         </motion.div>
@@ -147,7 +147,7 @@ export const HowWeWork = () => {
                                     initial="hidden"
                                     whileInView="visible"
                                     variants={shadowAnimation}
-                                    custom={3.5}>
+                                    custom={2}>
                             <Amazon className={style.AmazonSvg}/>
                             <p>Amazon</p>
                         </motion.div>
@@ -155,7 +155,7 @@ export const HowWeWork = () => {
                                     whileHover={whileHover}
                                     initial="hidden"
                                     whileInView="visible"
-                                    variants={shadowAnimation} custom={4.5}>
+                                    variants={shadowAnimation} custom={2}>
                             <p>Прочие по запросу</p>
                         </motion.div>
                     </motion.div>
