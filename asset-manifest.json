@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-app/static/css/main.9e1687f7.css",
-    "main.js": "/react-app/static/js/main.b416b4af.js",
+    "main.css": "/react-app/static/css/main.13558ea4.css",
+    "main.js": "/react-app/static/js/main.51304894.js",
     "static/js/787.28cb0dcd.chunk.js": "/react-app/static/js/787.28cb0dcd.chunk.js",
     "static/media/NunitoSans_10pt-Regular.ttf": "/react-app/static/media/NunitoSans_10pt-Regular.7a5b1e324beb1081259a.ttf",
     "static/media/NunitoSans_10pt-SemiBold.ttf": "/react-app/static/media/NunitoSans_10pt-SemiBold.39af491f33e04d1f69b6.ttf",
@@ -16,12 +16,12 @@
     "static/media/firstStep.svg": "/react-app/static/media/firstStep.c950ff6524e00f5b1005626b20412e89.svg",
     "index.html": "/react-app/index.html",
     "static/media/charm_menu-hamburger.svg": "/react-app/static/media/charm_menu-hamburger.20ef71ba434f56faad6ddb81a95dd01a.svg",
-    "main.9e1687f7.css.map": "/react-app/static/css/main.9e1687f7.css.map",
-    "main.b416b4af.js.map": "/react-app/static/js/main.b416b4af.js.map",
+    "main.13558ea4.css.map": "/react-app/static/css/main.13558ea4.css.map",
+    "main.51304894.js.map": "/react-app/static/js/main.51304894.js.map",
     "787.28cb0dcd.chunk.js.map": "/react-app/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e1687f7.css",
-    "static/js/main.b416b4af.js"
+    "static/css/main.13558ea4.css",
+    "static/js/main.51304894.js"
   ]
 }
